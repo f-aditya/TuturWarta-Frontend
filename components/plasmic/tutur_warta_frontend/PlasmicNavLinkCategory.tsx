@@ -71,14 +71,14 @@ import sty from "./PlasmicNavLinkCategory.module.css"; // plasmic-import: U2f6rD
 createPlasmicElementProxy;
 
 export type PlasmicNavLinkCategory__VariantMembers = {
-  unnamedVariant: "unnamedVariant";
+  isActiveTrue: "isActiveTrue";
 };
 export type PlasmicNavLinkCategory__VariantsArgs = {
-  unnamedVariant?: SingleBooleanChoiceArg<"unnamedVariant">;
+  isActiveTrue?: SingleBooleanChoiceArg<"isActiveTrue">;
 };
 type VariantPropType = keyof PlasmicNavLinkCategory__VariantsArgs;
 export const PlasmicNavLinkCategory__VariantProps = new Array<VariantPropType>(
-  "unnamedVariant"
+  "isActiveTrue"
 );
 
 export type PlasmicNavLinkCategory__ArgsType = {
@@ -101,7 +101,7 @@ export interface DefaultNavLinkCategoryProps {
   slug?: string;
   isActive?: boolean;
   children?: React.ReactNode;
-  unnamedVariant?: SingleBooleanChoiceArg<"unnamedVariant">;
+  isActiveTrue?: SingleBooleanChoiceArg<"isActiveTrue">;
   className?: string;
 }
 
@@ -150,10 +150,10 @@ function PlasmicNavLinkCategory__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "unnamedVariant",
+        path: "isActiveTrue",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.unnamedVariant
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.isActiveTrue
       }
     ],
     [$props, $ctx, $refs]
@@ -216,10 +216,10 @@ function PlasmicNavLinkCategory__RenderFunc(props: {
         ),
         value: args.children,
         className: classNames(sty.slotTargetChildren, {
-          [sty.slotTargetChildrenunnamedVariant]: hasVariant(
+          [sty.slotTargetChildrenisActiveTrue]: hasVariant(
             $state,
-            "unnamedVariant",
-            "unnamedVariant"
+            "isActiveTrue",
+            "isActiveTrue"
           )
         })
       })}

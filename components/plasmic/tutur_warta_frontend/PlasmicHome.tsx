@@ -180,17 +180,6 @@ function PlasmicHome__RenderFunc(props: {
                   "__wab_instance",
                   sty.navbarTuturWarta__n37Ru
                 )}
-                socialLink2={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__i0DiT
-                    )}
-                  >
-                    {"Ikon Sosial Dinamis"}
-                  </div>
-                }
               />
             ),
 

@@ -78,13 +78,9 @@ type VariantPropType = keyof PlasmicNavbarTuturWarta__VariantsArgs;
 export const PlasmicNavbarTuturWarta__VariantProps =
   new Array<VariantPropType>();
 
-export type PlasmicNavbarTuturWarta__ArgsType = {
-  socialLink2?: React.ReactNode;
-  activePageSlug?: string;
-};
+export type PlasmicNavbarTuturWarta__ArgsType = { activePageSlug?: string };
 type ArgPropType = keyof PlasmicNavbarTuturWarta__ArgsType;
 export const PlasmicNavbarTuturWarta__ArgProps = new Array<ArgPropType>(
-  "socialLink2",
   "activePageSlug"
 );
 
@@ -114,7 +110,6 @@ export type PlasmicNavbarTuturWarta__OverridesType = {
 };
 
 export interface DefaultNavbarTuturWartaProps {
-  socialLink2?: React.ReactNode;
   activePageSlug?: string;
   className?: string;
 }
@@ -193,20 +188,122 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
           hasGap={true}
           className={classNames(projectcss.all, sty.socialLink)}
         >
-          {renderPlasmicSlot({
-            defaultContents: (
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__bUvEt
-                )}
-              >
-                {"Ikon Sosial Dinamis"}
-              </div>
-            ),
-            value: args.socialLink2
-          })}
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__gfH6Q
+            )}
+            component={Link}
+            href={"https://www.facebook.com/profile.php?id=100064992493386"}
+            platform={"nextjs"}
+            target={"_blank"}
+          >
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__weuvU)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"30px"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/tutur_warta_frontend/images/fbPng.png",
+                fullWidth: 122,
+                fullHeight: 122,
+                aspectRatio: undefined
+              }}
+            />
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__qYhTi
+            )}
+            component={Link}
+            href={"https://www.instagram.com/farid_aditya_parma/"}
+            platform={"nextjs"}
+            target={"_blank"}
+          >
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__rLg1H)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"30px"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/tutur_warta_frontend/images/igPng.png",
+                fullWidth: 121,
+                fullHeight: 122,
+                aspectRatio: undefined
+              }}
+            />
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__kDd5P
+            )}
+            component={Link}
+            href={"https://x.com/FaridAdity36476"}
+            platform={"nextjs"}
+            target={"_blank"}
+          >
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__pXdEa)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"30px"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/tutur_warta_frontend/images/twitterXPng.png",
+                fullWidth: 121,
+                fullHeight: 121,
+                aspectRatio: undefined
+              }}
+            />
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__jBpvf
+            )}
+            component={Link}
+            href={"https://www.youtube.com/@suka_nonton"}
+            platform={"nextjs"}
+            target={"_blank"}
+          >
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__aJTj)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"30px"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/tutur_warta_frontend/images/youtubePng.png",
+                fullWidth: 122,
+                fullHeight: 122,
+                aspectRatio: undefined
+              }}
+            />
+          </PlasmicLink__>
         </Stack__>
         <PlasmicLink__
           data-plasmic-name={"users2"}
@@ -303,6 +400,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
                 throw e;
               }
             })()}
+            isActiveTrue={(() => {
+              try {
+                return $props.activePageSlug === "/";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return [];
+                }
+                throw e;
+              }
+            })()}
             slug={"/"}
           />
 
@@ -339,7 +449,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"ekonomi"}
             data-plasmic-override={overrides.ekonomi}
             className={classNames("__wab_instance", sty.ekonomi)}
-            isActive={false}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Ekonomi";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Ekonomi"}
           >
             <div
@@ -356,6 +478,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"techno"}
             data-plasmic-override={overrides.techno}
             className={classNames("__wab_instance", sty.techno)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Techno";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Techno"}
           >
             <div
@@ -372,6 +507,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"otomotif"}
             data-plasmic-override={overrides.otomotif}
             className={classNames("__wab_instance", sty.otomotif)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Otomotif";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Otomotif"}
           >
             <div
@@ -388,6 +536,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"sport"}
             data-plasmic-override={overrides.sport}
             className={classNames("__wab_instance", sty.sport)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Sport";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Sport"}
           >
             <div
@@ -404,6 +565,32 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"lifestyle"}
             data-plasmic-override={overrides.lifestyle}
             className={classNames("__wab_instance", sty.lifestyle)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Lifestyle";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
+            isActiveTrue={(() => {
+              try {
+                return $props.activePageSlug === "/Lifestyle";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "isActiveTrue";
+                }
+                throw e;
+              }
+            })()}
             slug={"/Lifestyle"}
           >
             <div
@@ -420,6 +607,20 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"celebrity"}
             data-plasmic-override={overrides.celebrity}
             className={classNames("__wab_instance", sty.celebrity)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Celebrity";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
+            slug={"/Celebrity"}
           >
             <div
               className={classNames(
@@ -435,6 +636,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"travel"}
             data-plasmic-override={overrides.travel}
             className={classNames("__wab_instance", sty.travel)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Travel";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Travel"}
           >
             <div
@@ -451,6 +665,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"healt"}
             data-plasmic-override={overrides.healt}
             className={classNames("__wab_instance", sty.healt)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Healt";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Healt"}
           >
             <div
@@ -467,6 +694,19 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"edukasi"}
             data-plasmic-override={overrides.edukasi}
             className={classNames("__wab_instance", sty.edukasi)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Edukasi";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
             slug={"/Edukasi"}
           >
             <div
@@ -483,6 +723,32 @@ function PlasmicNavbarTuturWarta__RenderFunc(props: {
             data-plasmic-name={"muslim"}
             data-plasmic-override={overrides.muslim}
             className={classNames("__wab_instance", sty.muslim)}
+            isActive={(() => {
+              try {
+                return $props.activePageSlug === "/Muslim";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()}
+            isActiveTrue={(() => {
+              try {
+                return undefined;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return [];
+                }
+                throw e;
+              }
+            })()}
             slug={"/Muslim"}
           >
             <div
